@@ -35,13 +35,10 @@ export const GET = withErrorHandling(async (req: Request) => {
   const remotePlayableParam = searchParams.get("remotePlayable");
   const remotePlayable =
     remotePlayableParam === "true"
-      ? 
-      remotePlayableParam === "true"
-        ? ? 
-      true
+      ? true
       : remotePlayableParam === "false"
         ? false
-      : undefined;
+        : undefined;
   const requestId = req.headers.get("x-request-id") ?? undefined;
 
   if (
